@@ -58,6 +58,46 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <!--输入在sonatype创建的账户和联系邮箱 -->
+            <name>CementWork</name>
+            <email>787349535@qq.com</email>
+            <url>${projectUrl}</url>
+        </developer>
+    </developers>
+
+
+    <!--以下部分内容不需要修改，直接复制咱贴即可-->
+    <url>${projectUrl}</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo,manual</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <!-- 采用projectUrl变量代替这个值，方便给重复利用这个配置，也就是上面的标签替换一下值就行 -->
+        <connection>${projectUrl}</connection>
+        <developerConnection>${projectUrl}</developerConnection>
+        <url>${projectUrl}</url>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
+            <id>${serverId}</id>
+            <name>OSS Snapshots Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
+            <id>${serverId}</id>
+            <name>OSS Staging Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
