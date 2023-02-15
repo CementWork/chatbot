@@ -5,12 +5,13 @@
     <parent>
         <artifactId>chatai-spring-boot</artifactId>
         <groupId>io.github.cementwork</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>chatai-spring-boot-autoconfigure</artifactId>
 
+    <name>chatai-spring-boot-autoconfigure</name>
 
     <dependencies>
         <dependency>
